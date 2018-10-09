@@ -8,7 +8,6 @@ namespace FinancialPlanner.Controllers
 {
     public class ActivitiesController : ApiController
     {
-        // GET: api/Activities
         public Result<IList<Activities>> Get()
         {            
             var result = new Result<IList<Activities>>();            
