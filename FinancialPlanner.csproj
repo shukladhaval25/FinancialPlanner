@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1BCE1C77-7523-4792-B213-7AC665CFE416}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FinancialPlanner</RootNamespace>
+    <AssemblyName>FinancialPlanner</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Data\App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ActivitiesController.cs" />
+    <Compile Include="Controllers\ApplicationConfigurationController.cs" />
+    <Compile Include="Controllers\AuthenticationController.cs" />
+    <Compile Include="Controllers\ClientContactController.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Controllers\ClientSpouseController.cs" />
+    <Compile Include="Controllers\CurrentStatus\BondsController.cs" />
+    <Compile Include="Controllers\CurrentStatus\CurrentStatusCalculatorController.cs" />
+    <Compile Include="Controllers\CurrentStatus\FixedDepositeController.cs" />
+    <Compile Include="Controllers\CurrentStatus\GeneralInsuranceController.cs" />
+    <Compile Include="Controllers\CurrentStatus\LifeInsuranceController.cs" />
+    <Compile Include="Controllers\CurrentStatus\MFTransactionsController.cs" />
+    <Compile Include="Controllers\CurrentStatus\MutualFundController.cs" />
+    <Compile Include="Controllers\CurrentStatus\NPSController.cs" />
+    <Compile Include="Controllers\CurrentStatus\NSCController.cs" />
+    <Compile Include="Controllers\CurrentStatus\PPFController.cs" />
+    <Compile Include="Controllers\CurrentStatus\RecurringDepositController.cs" />
+    <Compile Include="Controllers\CurrentStatus\SavingAccountController.cs" />
+    <Compile Include="Controllers\CurrentStatus\SCSSController.cs" />
+    <Compile Include="Controllers\CurrentStatus\SharesController.cs" />
+    <Compile Include="Controllers\CurrentStatus\SukanyaSamrudhiController.cs" />
+    <Compile Include="Controllers\CurrentStatus\ULIPController.cs" />
+    <Compile Include="Controllers\EmailArticleController.cs" />
+    <Compile Include="Controllers\EmailSchedulerController.cs" />
+    <Compile Include="Controllers\EmploymentController.cs" />
+    <Compile Include="Controllers\FamilyMemberController.cs" />
+    <Compile Include="Controllers\Planner\ExpensesController.cs" />
+    <Compile Include="Controllers\Planner\GoalsController.cs" />
+    <Compile Include="Controllers\Planner\IncomeController.cs" />
+    <Compile Include="Controllers\Planner\LoanController.cs" />
+    <Compile Include="Controllers\Planner\NonFinancialAssetController.cs" />
+    <Compile Include="Controllers\Planner\PlannerAssumptionController.cs" />
+    <Compile Include="Controllers\Planner\PlannerController.cs" />
+    <Compile Include="Controllers\Planner\PlannerSessionController.cs" />
+    <Compile Include="Controllers\Planner\RecommendedSchemesController.cs" />
+    <Compile Include="Controllers\Planner\RiskProfileInvestmentSegmentController.cs" />
+    <Compile Include="Controllers\Planner\RiskProfileReturnController.cs" />
+    <Compile Include="Controllers\PlanOptions\CashFlowController.cs" />
+    <Compile Include="Controllers\PlanOptions\PlanOptionController.cs" />
+    <Compile Include="Controllers\ProspectClientController.cs" />
+    <Compile Include="Controllers\SessionController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FinancialPlanner.BusinessLogic\FinancialPlanner.BusinessLogic.csproj">
+      <Project>{de9b4746-e5bf-478b-94bc-123948e590fe}</Project>
+      <Name>FinancialPlanner.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FinancialPlanner.Common\FinancialPlanner.Common.csproj">
+      <Project>{77966dd0-e26f-4e18-8917-54088551c617}</Project>
+      <Name>FinancialPlanner.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61199</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:37882/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
