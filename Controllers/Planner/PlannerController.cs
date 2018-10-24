@@ -20,7 +20,20 @@ namespace FinancialPlanner.Controllers
             result.IsSuccess = true;
             return result;
         }
-       
+
+        [Route("api/Planner/GetByPlannerId")]
+        [HttpGet]
+        public Result<Planner> GetByPlannerId(int id)
+        {
+            var result = new Result<Planner>();
+            PlannerService plannerService = new PlannerService();
+
+            var planner = plannerService.GetByPlannerId(id);
+            result.Value = planner;
+            result.IsSuccess = true;
+            return result;
+        }
+
         [Route("api/Planner/Add")]
         [HttpPost]
         public Result Add(Planner planner)
