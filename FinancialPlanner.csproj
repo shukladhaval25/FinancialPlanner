@@ -78,6 +78,7 @@
     <Compile Include="Controllers\ActivitiesController.cs" />
     <Compile Include="Controllers\ApplicationConfigurationController.cs" />
     <Compile Include="Controllers\AuthenticationController.cs" />
+    <Compile Include="Controllers\BankAccountController.cs" />
     <Compile Include="Controllers\ClientContactController.cs" />
     <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\ClientSpouseController.cs" />
@@ -113,6 +114,7 @@
     <Compile Include="Controllers\Planner\RiskProfileInvestmentSegmentController.cs" />
     <Compile Include="Controllers\Planner\RiskProfileReturnController.cs" />
     <Compile Include="Controllers\PlanOptions\CashFlowController.cs" />
+    <Compile Include="Controllers\PlanOptions\CurrentStatusToGoalController.cs" />
     <Compile Include="Controllers\PlanOptions\PlanOptionController.cs" />
     <Compile Include="Controllers\ProspectClientController.cs" />
     <Compile Include="Controllers\SessionController.cs" />
