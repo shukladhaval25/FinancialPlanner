@@ -8,6 +8,7 @@ namespace FinancialPlanner.Controllers
 {
     public class ActivitiesController : ApiController
     {
+
         public Result<IList<Activities>> Get()
         {            
             var result = new Result<IList<Activities>>();            
@@ -17,6 +18,16 @@ namespace FinancialPlanner.Controllers
             return result;
         }
 
+        [Route("api/ActivitiesController/GetByUserName")]
+        [HttpGet]
+        public Result<IList<Activities>> Get(string userName)
+        {
+            var result = new Result<IList<Activities>>();
+            var lstActivities = ActivitiesService.Get(userName);
+            result.Value = (IList<Activities>)lstActivities;
+            result.IsSuccess = true;
+            return result;
+        }
               //// POST: api/Activities
         //[HttpPost]
         public Result Add(Activities activity)
