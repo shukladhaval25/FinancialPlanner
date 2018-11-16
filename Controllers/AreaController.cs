@@ -1,38 +1,38 @@
 ﻿using FinancialPlanner.Common.Model;
 using System;
 using System.Collections.Generic;
-using FinancialPlanner.BusinessLogic.Clients;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using FinancialPlanner.BusinessLogic.ApplicationMaster;
 
 namespace FinancialPlanner.Controllers
 {
-    public class CRMGroupController : ApiController
+    public class AreaController : ApiController
     {
-        [Route("api/CRMGroup/GetAll")]
+        [Route("api/Area/GetAll")]
         [HttpGet]
-        public Result<IList<CRMGroup>> GetAll()
+        public Result<IList<Area>> GetAll()
         {
-            var result = new Result<IList<CRMGroup>>();
-            CRMGroupService CRMGroupService = new CRMGroupService();
+            var result = new Result<IList<Area>>();
+            AreaService AreaService = new AreaService();
 
-            var lstClient = CRMGroupService.Get();
-            result.Value = (IList<CRMGroup>)lstClient;
+            var lstClient = AreaService.Get();
+            result.Value = (IList<Area>)lstClient;
             result.IsSuccess = true;
             return result;
         }
-        
-        [Route("api/CRMGroup/Add")]
+
+        [Route("api/Area/Add")]
         [HttpPost]
-        public Result Add(CRMGroup crmGroup)
+        public Result Add(Area Area)
         {
             var result = new Result();
             try
             {
-                CRMGroupService CRMGroupService = new CRMGroupService();
-                CRMGroupService.Add(crmGroup);
+                AreaService AreaService = new AreaService();
+                AreaService.Add(Area);
                 result.IsSuccess = true;
             }
             catch (Exception exception)
@@ -43,15 +43,15 @@ namespace FinancialPlanner.Controllers
             return result;
         }
 
-        [Route("api/CRMGroup/Delete")]
+        [Route("api/Area/Delete")]
         [HttpDelete]
-        public Result Delete(CRMGroup CRMGroup)
+        public Result Delete(Area Area)
         {
             var result = new Result();
             try
             {
-                CRMGroupService CRMGroupService = new CRMGroupService();
-                CRMGroupService.Delete(CRMGroup);
+                AreaService AreaService = new AreaService();
+                AreaService.Delete(Area);
                 result.IsSuccess = true;
             }
             catch (Exception exception)
