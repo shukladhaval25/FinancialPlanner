@@ -14,9 +14,9 @@ namespace FinancialPlanner.Controllers
     {
         [Route("api/Company/Get")]
         [HttpGet]
-        public Result<Company> Get()
+        public Result<IList<Company>> Get()
         {
-            var result = new Result<Company>();
+            var result = new Result<IList<Company>>();
             CompanyService compService = new CompanyService();
 
             var comp = compService.Get();
@@ -34,6 +34,44 @@ namespace FinancialPlanner.Controllers
             {
                 CompanyService compService = new CompanyService();
                 compService.Add(company);
+                result.IsSuccess = true;
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
+        }
+
+        [Route("api/Company/Update")]
+        [HttpPost]
+        public Result Update(Company company)
+        {
+            var result = new Result();
+            try
+            {
+                CompanyService compService = new CompanyService();
+                compService.Update(company);
+                result.IsSuccess = true;
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
+        }
+
+        [Route("api/Company/Delete")]
+        [HttpPost]
+        public Result Delete(Company company)
+        {
+            var result = new Result();
+            try
+            {
+                CompanyService compService = new CompanyService();
+                compService.Delete(company);
                 result.IsSuccess = true;
             }
             catch (Exception exception)
