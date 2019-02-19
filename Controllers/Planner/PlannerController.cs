@@ -53,10 +53,25 @@ namespace FinancialPlanner.Controllers
             return result;
         }
 
-        // PUT: api/Planner/5
-        public void Put(int id, [FromBody]string value)
+        [Route("api/Planner/Update")]
+        [HttpPost]
+        public Result Update(Planner planner)
         {
+            var result = new Result();
+            try
+            {
+                PlannerService plannerService = new PlannerService();
+                plannerService.Update(planner);
+                result.IsSuccess = true;
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
         }
+       
 
         // DELETE: api/Planner/5
         public void Delete(int id)
