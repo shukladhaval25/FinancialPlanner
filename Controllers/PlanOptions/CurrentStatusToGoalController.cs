@@ -14,11 +14,11 @@ namespace FinancialPlanner.Controllers.PlanOptions
     {
         [Route("api/CurrentStatusToGoal/Get")]
         [HttpGet]
-        public Result<IList<CurrentStatusToGoal>> Get(int optionId)
+        public Result<IList<CurrentStatusToGoal>> Get(int optionId,int planId)
         {
             Result<IList<CurrentStatusToGoal>> result = new Result<IList<CurrentStatusToGoal>>();
             CurrentStatusToGoalService currentStatusToGoalService = new CurrentStatusToGoalService();
-            result.Value = currentStatusToGoalService.Get(optionId);
+            result.Value = currentStatusToGoalService.Get(optionId,planId);
             result.IsSuccess = true;
             return result;
         }
