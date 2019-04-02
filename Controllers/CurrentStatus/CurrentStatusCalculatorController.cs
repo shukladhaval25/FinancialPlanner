@@ -33,5 +33,7 @@ namespace FinancialPlanner.Controllers.CurrentStatus
             result.IsSuccess = true;
             return result;
         }
+
+
     }
 }

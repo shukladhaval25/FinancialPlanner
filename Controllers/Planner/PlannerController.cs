@@ -71,11 +71,24 @@ namespace FinancialPlanner.Controllers
             }
             return result;
         }
-       
 
-        // DELETE: api/Planner/5
-        public void Delete(int id)
+        [Route("api/Planner/Delete")]
+        [HttpPost]
+        public Result Delete(Planner planner)
         {
+            var result = new Result();
+            try
+            {
+                PlannerService plannerService = new PlannerService();
+                plannerService.Delete(planner);
+                result.IsSuccess = true;
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
         }
     }
 }

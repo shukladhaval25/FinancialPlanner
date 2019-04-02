@@ -89,6 +89,7 @@
     <Compile Include="Controllers\CRMGroupController.cs" />
     <Compile Include="Controllers\CurrentStatus\BondsController.cs" />
     <Compile Include="Controllers\CurrentStatus\CurrentStatusCalculatorController.cs" />
+    <Compile Include="Controllers\CurrentStatus\CurrentStatusInstrumentController.cs" />
     <Compile Include="Controllers\CurrentStatus\EPFController.cs" />
     <Compile Include="Controllers\CurrentStatus\FixedDepositeController.cs" />
     <Compile Include="Controllers\CurrentStatus\GeneralInsuranceController.cs" />

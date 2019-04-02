@@ -37,6 +37,19 @@ namespace FinancialPlanner.Controllers
             return result;
         }
 
+        [Route("api/Client/GetByOtherValues")]
+        [HttpGet]
+        public Result<Client> GetByOtherValues(string name, string pancard)
+        {
+            var result = new Result<Client>();
+            ClientService clientService = new ClientService();
+
+            var client = clientService.GetByOtherValues(name,pancard);
+            result.Value = (Client)client;
+            result.IsSuccess = true;
+            return result;
+        }
+
         [HttpPost]
         [Route("api/Client/Add")]
         public Result Add(Client client)
