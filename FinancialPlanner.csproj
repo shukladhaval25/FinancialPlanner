@@ -111,6 +111,7 @@
     <Compile Include="Controllers\FamilyMemberController.cs" />
     <Compile Include="Controllers\FestivalsController.cs" />
     <Compile Include="Controllers\Masters\AssumptionMasterController.cs" />
+    <Compile Include="Controllers\Masters\ClientRatingController.cs" />
     <Compile Include="Controllers\Planner\DocumentController.cs" />
     <Compile Include="Controllers\Planner\ExpensesController.cs" />
     <Compile Include="Controllers\Planner\GoalsController.cs" />
