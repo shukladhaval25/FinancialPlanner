@@ -28,10 +28,19 @@ namespace FinancialPlanner.Controllers.CurrentStatus
         public Result<IList<CurrentStatusInstrument>> GetAll(int plannerId)
         {
             var result = new Result<IList<CurrentStatusInstrument>>();
-            CurrentStatusInstrumentService csService = new CurrentStatusInstrumentService();
-            result.Value = csService.GetAllCurrentStatusAmount(plannerId);
-            result.IsSuccess = true;
-            return result;
+            try
+            {                
+                CurrentStatusInstrumentService csService = new CurrentStatusInstrumentService();
+                result.Value = csService.GetAllCurrentStatusAmount(plannerId);
+                result.IsSuccess = true;
+                return result;
+            }
+            catch(Exception ex)
+            {
+                result.Value = null;
+                result.IsSuccess = false;
+                return result;
+            }
         }
     }
 }
