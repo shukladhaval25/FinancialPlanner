@@ -34,3 +34,4 @@ C:\Application Development\Financial Planner Project\FinancialPlanner\obj\Debug\
 C:\Application Development\Financial Planner Project\FinancialPlanner\obj\Debug\FinancialPlanner.csproj.CopyComplete
 C:\Application Development\Financial Planner Project\FinancialPlanner\obj\Debug\FinancialPlanner.dll
 C:\Application Development\Financial Planner Project\FinancialPlanner\obj\Debug\FinancialPlanner.pdb
+C:\Application Development\Financial Planner Project\FinancialPlanner\bin\ChilkatDotNet4.dll

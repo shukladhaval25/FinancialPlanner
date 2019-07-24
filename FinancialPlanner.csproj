@@ -90,6 +90,7 @@
     <Compile Include="Controllers\CurrentStatus\BondsController.cs" />
     <Compile Include="Controllers\CurrentStatus\CurrentStatusCalculatorController.cs" />
     <Compile Include="Controllers\CurrentStatus\CurrentStatusInstrumentController.cs" />
+    <Compile Include="Controllers\CurrentStatus\OthersController.cs" />
     <Compile Include="Controllers\CurrentStatus\EPFController.cs" />
     <Compile Include="Controllers\CurrentStatus\FixedDepositeController.cs" />
     <Compile Include="Controllers\CurrentStatus\GeneralInsuranceController.cs" />
@@ -129,6 +130,7 @@
     <Compile Include="Controllers\PlanOptions\PlanOptionController.cs" />
     <Compile Include="Controllers\ProspectClientController.cs" />
     <Compile Include="Controllers\SessionController.cs" />
+    <Compile Include="Controllers\TaskManagement\TaskProjectController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
