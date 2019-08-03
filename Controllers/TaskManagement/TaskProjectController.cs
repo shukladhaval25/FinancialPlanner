@@ -54,14 +54,42 @@ namespace FinancialPlanner.Controllers.TaskManagement
             return result;
         }
 
-        // PUT: api/TaskProject/5
-        public void Put(int id, [FromBody]string value)
+        [Route("api/TaskProjectController/Update")]
+        [HttpPost]
+        public Result Update(Project project)
         {
+            var result = new Result();
+            try
+            {
+                TaskProjectService projectService = new TaskProjectService();
+                projectService.Update(project);
+                result.IsSuccess = true;
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
         }
 
-        // DELETE: api/TaskProject/5
-        public void Delete(int id)
+        [Route("api/TaskProjectController/Delete")]
+        [HttpPost]
+        public Result Delete(Project project)
         {
+            var result = new Result();
+            try
+            {
+                TaskProjectService projectService = new TaskProjectService();
+                projectService.Delete(project);
+                result.IsSuccess = true;
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
         }
     }
 }
