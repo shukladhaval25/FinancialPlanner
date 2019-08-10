@@ -114,6 +114,7 @@
     <Compile Include="Controllers\Masters\AssumptionMasterController.cs" />
     <Compile Include="Controllers\Masters\ARNController.cs" />
     <Compile Include="Controllers\Masters\ClientRatingController.cs" />
+    <Compile Include="Controllers\Masters\SchemeController.cs" />
     <Compile Include="Controllers\Planner\DocumentController.cs" />
     <Compile Include="Controllers\Planner\ExpensesController.cs" />
     <Compile Include="Controllers\Planner\GoalsController.cs" />
