@@ -26,6 +26,46 @@ namespace FinancialPlanner.Controllers.TaskManagement
             return result;
         }
 
+        [Route("api/TaskController/GetOverDueTask")]
+        [HttpGet]
+        public Result<IList<TaskCard>> GetOverDueTask(int userId)
+        {
+            var result = new Result<IList<TaskCard>>();
+            TaskService taskService = new TaskService();
+
+            var taskCards = taskService.GetOverDueTasks(userId);
+            result.Value = (IList<TaskCard>)taskCards;
+            result.IsSuccess = true;
+            return result;
+        }
+
+        [Route("api/TaskController/GetTaskByProjectAndUser")]
+        [HttpGet]
+        public Result<IList<TaskCard>> GetTaskByProjectAndUser(string projetName, int userId)
+        {
+            var result = new Result<IList<TaskCard>>();
+            TaskService taskService = new TaskService();
+
+            var taskCards = taskService.GetOpenTaskByProjectForUser(projetName, userId);
+            result.Value = (IList<TaskCard>)taskCards;
+            result.IsSuccess = true;
+            return result;
+        }
+
+
+        [Route("api/TaskController/GetAll")]
+        [HttpGet]
+        public Result<IList<TaskCard>> GetAll()
+        {
+            var result = new Result<IList<TaskCard>>();
+            TaskService taskService = new TaskService();
+
+            var taskCards = taskService.GetAll();
+            result.Value = (IList<TaskCard>)taskCards;
+            result.IsSuccess = true;
+            return result;
+        }
+
         [Route("api/TaskController/Add")]
         [HttpPost]
         public Result Add(TaskCard taskCard)

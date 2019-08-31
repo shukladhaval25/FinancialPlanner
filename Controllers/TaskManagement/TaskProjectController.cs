@@ -22,6 +22,18 @@ namespace FinancialPlanner.Controllers.TaskManagement
             return result;
         }
 
+        [Route("api/TaskProjectController/GetOpenTaskProjectWise")]
+        [HttpGet]
+        public Result<IList<KeyValuePair<string,int>>> GetOpenTaskProjectWise(int userId)
+        {
+             var result = new Result<IList<KeyValuePair<string, int>>>();
+            TaskProjectService  taskProjectService = new TaskProjectService();
+
+            result.Value = taskProjectService.GetOpenTaskProjectWise(userId);
+            result.IsSuccess = true;
+            return result;
+        }
+
         [Route("api/TaskProjectController/Get")]
         [HttpGet]
         public Result<Project> Get(int id)

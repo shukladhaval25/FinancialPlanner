@@ -111,6 +111,7 @@
     <Compile Include="Controllers\EmploymentController.cs" />
     <Compile Include="Controllers\FamilyMemberController.cs" />
     <Compile Include="Controllers\FestivalsController.cs" />
+    <Compile Include="Controllers\Masters\AMCController.cs" />
     <Compile Include="Controllers\Masters\AssumptionMasterController.cs" />
     <Compile Include="Controllers\Masters\ARNController.cs" />
     <Compile Include="Controllers\Masters\ClientRatingController.cs" />

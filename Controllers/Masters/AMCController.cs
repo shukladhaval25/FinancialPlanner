@@ -1,47 +1,39 @@
 ﻿using FinancialPlanner.Common.Model;
 using FinancialPlanner.Common.Model.TaskManagement.MFTransactions;
+using FinancialPlanner.BusinessLogic.ApplicationMaster;
 using System;
 using System.Collections.Generic;
-using FinancialPlanner.BusinessLogic.ApplicationMaster;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Web.Http;
 
 namespace FinancialPlanner.Controllers.Masters
 {
-    public class SchemeController : ApiController
+    public class AMCController : ApiController
     {
-        [Route("api/Scheme/GetAll")]
+        [Route("api/AMC/GetAll")]
         [HttpGet]
-        public Result<IList<Scheme>> GetAll()
+        public Result<IList<AMC>> GetAll()
         {
-            var result = new Result<IList<Scheme>>();
-            SchemeService SchemeService = new SchemeService();
+            var result = new Result<IList<AMC>>();
+            AMCService AMCService = new AMCService();
 
-            var lstClient = SchemeService.Get();
-            result.Value = (IList<Scheme>)lstClient;
+            var lstClient = AMCService.Get();
+            result.Value = (IList<AMC>)lstClient;
             result.IsSuccess = true;
             return result;
         }
 
-        [Route("api/Scheme/GetSchemeCount")]
-        [HttpGet]
-        public Result<int> GetCount(int amcId)
-        {
-            var result = new Result<int>();
-            SchemeService SchemeService = new SchemeService();
-            result.Value = SchemeService.Get(amcId);
-            result.IsSuccess = true;
-            return result;
-        }
-
-        [Route("api/Scheme/Add")]
+        [Route("api/AMC/Add")]
         [HttpPost]
-        public Result Add(Scheme Scheme)
+        public Result Add(AMC AMC)
         {
             var result = new Result();
             try
             {
-                SchemeService SchemeService = new SchemeService();
-                SchemeService.Add(Scheme);
+                AMCService AMCService = new AMCService();
+                AMCService.Add(AMC);
                 result.IsSuccess = true;
             }
             catch (Exception exception)
@@ -52,15 +44,15 @@ namespace FinancialPlanner.Controllers.Masters
             return result;
         }
 
-        [Route("api/Scheme/Update")]
+        [Route("api/AMC/Update")]
         [HttpPost]
-        public Result Update(Scheme Scheme)
+        public Result Update(AMC AMC)
         {
             var result = new Result();
             try
             {
-                SchemeService SchemeService = new SchemeService();
-                SchemeService.Update(Scheme);
+                AMCService AMCService = new AMCService();
+                AMCService.Update(AMC);
                 result.IsSuccess = true;
             }
             catch (Exception exception)
@@ -71,15 +63,15 @@ namespace FinancialPlanner.Controllers.Masters
             return result;
         }
 
-        [Route("api/Scheme/Delete")]
+        [Route("api/AMC/Delete")]
         [HttpDelete]
-        public Result Delete(Scheme Scheme)
+        public Result Delete(AMC AMC)
         {
             var result = new Result();
             try
             {
-                SchemeService SchemeService = new SchemeService();
-                SchemeService.Delete(Scheme);
+                AMCService AMCService = new AMCService();
+                AMCService.Delete(AMC);
                 result.IsSuccess = true;
             }
             catch (Exception exception)
