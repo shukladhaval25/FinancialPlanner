@@ -22,6 +22,18 @@ namespace FinancialPlanner.Controllers.Masters
             return result;
         }
 
+        [Route("api/Scheme/GetAll")]
+        [HttpGet]
+        public Result<IList<Scheme>> GetAll(int amcId)
+        {
+            var result = new Result<IList<Scheme>>();
+            SchemeService SchemeService = new SchemeService();
+
+            result.Value = SchemeService.GetAll(amcId);
+            result.IsSuccess = true;
+            return result;
+        }
+
         [Route("api/Scheme/GetSchemeCount")]
         [HttpGet]
         public Result<int> GetCount(int amcId)

@@ -26,6 +26,32 @@ namespace FinancialPlanner.Controllers.TaskManagement
             return result;
         }
 
+        [Route("api/TaskController/NotifiedTasks")]
+        [HttpGet]
+        public Result<IList<TaskCard>> GetNotifiedTasks(int userId)
+        {
+            var result = new Result<IList<TaskCard>>();
+            TaskService taskService = new TaskService();
+
+            var taskCards = taskService.GetNotified(userId);
+            result.Value = (IList<TaskCard>)taskCards;
+            result.IsSuccess = true;
+            return result;
+        }
+
+        [Route("api/TaskController/AssignTo")]
+        [HttpGet]
+        public Result<IList<TaskCard>> AssignTo(int userId)
+        {
+            var result = new Result<IList<TaskCard>>();
+            TaskService taskService = new TaskService();
+
+            var taskCards = taskService.GetByAssignTo(userId);
+            result.Value = (IList<TaskCard>)taskCards;
+            result.IsSuccess = true;
+            return result;
+        }
+
         [Route("api/TaskController/GetOverDueTask")]
         [HttpGet]
         public Result<IList<TaskCard>> GetOverDueTask(int userId)
@@ -68,14 +94,15 @@ namespace FinancialPlanner.Controllers.TaskManagement
 
         [Route("api/TaskController/Add")]
         [HttpPost]
-        public Result Add(TaskCard taskCard)
+        public Result<int> Add(TaskCard taskCard)
         {
-            var result = new Result();
+            var result = new Result<int>();
             try
             {
                 TaskService taskService = new TaskService();
-                taskService.Add(taskCard);
+                result.Value =  taskService.Add(taskCard);
                 result.IsSuccess = true;
+                return result;
             }
             catch (Exception exception)
             {

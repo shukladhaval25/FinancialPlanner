@@ -134,6 +134,7 @@
     <Compile Include="Controllers\ProspectClientController.cs" />
     <Compile Include="Controllers\SessionController.cs" />
     <Compile Include="Controllers\TaskManagement\TaskController.cs" />
+    <Compile Include="Controllers\TaskManagement\TaskNotificationController.cs" />
     <Compile Include="Controllers\TaskManagement\TaskProjectController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
