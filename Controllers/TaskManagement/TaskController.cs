@@ -26,6 +26,19 @@ namespace FinancialPlanner.Controllers.TaskManagement
             return result;
         }
 
+        [Route("api/TaskController/GetAllByProjectName")]
+        [HttpGet]
+        public Result<IList<TaskCard>> GetAllByProjectName(string projectName)
+        {
+            var result = new Result<IList<TaskCard>>();
+            TaskService taskService = new TaskService();
+
+            var taskCards = taskService.GetAll(projectName);
+            result.Value = (IList<TaskCard>)taskCards;
+            result.IsSuccess = true;
+            return result;
+        }
+
         [Route("api/TaskController/NotifiedTasks")]
         [HttpGet]
         public Result<IList<TaskCard>> GetNotifiedTasks(int userId)
@@ -101,6 +114,26 @@ namespace FinancialPlanner.Controllers.TaskManagement
             {
                 TaskService taskService = new TaskService();
                 result.Value =  taskService.Add(taskCard);
+                result.IsSuccess = true;
+                return result;
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
+        }
+
+        [Route("api/TaskController/Update")]
+        [HttpPost]
+        public Result<int> Update(TaskCard taskCard)
+        {
+            var result = new Result<int>();
+            try
+            {
+                TaskService taskService = new TaskService();
+                result.Value = taskService.Update(taskCard);
                 result.IsSuccess = true;
                 return result;
             }
