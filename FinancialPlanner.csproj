@@ -109,6 +109,7 @@
     <Compile Include="Controllers\EmailArticleController.cs" />
     <Compile Include="Controllers\EmailSchedulerController.cs" />
     <Compile Include="Controllers\EmploymentController.cs" />
+    <Compile Include="Controllers\FamilyMemberBankController.cs" />
     <Compile Include="Controllers\FamilyMemberController.cs" />
     <Compile Include="Controllers\FestivalsController.cs" />
     <Compile Include="Controllers\Masters\AMCController.cs" />
