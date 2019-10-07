@@ -52,5 +52,24 @@ namespace FinancialPlanner.Controllers.TaskManagement
             }
             return result;
         }
+
+        [Route("api/TaskCommentController/Update")]
+        [HttpPost]
+        public Result Update(TaskComment taskComment)
+        {
+            var result = new Result();
+            try
+            {
+                TaskCommentService taskCommentService = new TaskCommentService();
+                taskCommentService.UpdateTaskComment(taskComment);
+                result.IsSuccess = true;
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
+        }
     }
 }
