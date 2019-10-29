@@ -117,6 +117,7 @@
     <Compile Include="Controllers\Masters\AssumptionMasterController.cs" />
     <Compile Include="Controllers\Masters\ARNController.cs" />
     <Compile Include="Controllers\Masters\ClientRatingController.cs" />
+    <Compile Include="Controllers\Masters\SchemeCategoryController.cs" />
     <Compile Include="Controllers\Masters\SchemeController.cs" />
     <Compile Include="Controllers\Planner\DocumentController.cs" />
     <Compile Include="Controllers\Planner\ExpensesController.cs" />
@@ -132,6 +133,7 @@
     <Compile Include="Controllers\Planner\RiskProfileReturnController.cs" />
     <Compile Include="Controllers\PlanOptions\CashFlowController.cs" />
     <Compile Include="Controllers\PlanOptions\CurrentStatusToGoalController.cs" />
+    <Compile Include="Controllers\PlanOptions\InvestmentRecommendationController.cs" />
     <Compile Include="Controllers\PlanOptions\PlanOptionController.cs" />
     <Compile Include="Controllers\ProspectClientController.cs" />
     <Compile Include="Controllers\SessionController.cs" />
