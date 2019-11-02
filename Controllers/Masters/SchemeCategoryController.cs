@@ -25,6 +25,19 @@ namespace FinancialPlanner.Controllers.Masters
             return result;
         }
 
+        [Route("api/SchemeCategory/Get")]
+        [HttpGet]
+        public Result<SchemeCategory> Get(int id)
+        {
+            var result = new Result<SchemeCategory>();
+            SchemeCategoryService SchemeCategoryService = new SchemeCategoryService();
+
+            var lstClient = SchemeCategoryService.Get(id);
+            result.Value = (SchemeCategory)lstClient;
+            result.IsSuccess = true;
+            return result;
+        }
+
         [Route("api/SchemeCategory/Add")]
         [HttpPost]
         public Result Add(SchemeCategory schemeCategory)
