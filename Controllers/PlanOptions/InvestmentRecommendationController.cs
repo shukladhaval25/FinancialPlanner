@@ -1,4 +1,5 @@
-﻿using FinancialPlanner.Common.Model;
+﻿using FinancialPlanner.BusinessLogic.PlanOption;
+using FinancialPlanner.Common.Model;
 using FinancialPlanner.Common.Model.PlanOptions;
 using System;
 using System.Collections.Generic;
@@ -13,63 +14,25 @@ namespace FinancialPlanner.Controllers.PlanOptions
     {
         [Route("api/InvestmentRecommendationController/Get")]
         [HttpGet]
-        public Result<InvestmentRecommendation> Get(int plannerId)
+        public Result<InvestmentRecommendationRatio> Get(int plannerId)
         {
-            Result<InvestmentRecommendation> result = new Result<InvestmentRecommendation>();
-            //CashFlowService cashFlowService = new CashFlowService();
-            //result.Value = cashFlowService.Get(plannerId);
+            var result = new Result<InvestmentRecommendationRatio>();
+            InvestmentRecommendationService investmentRecommendationService = new InvestmentRecommendationService();
+            result.Value = investmentRecommendationService.Get(plannerId);
             result.IsSuccess = true;
             return result;
         }
 
-        [Route("api/InvestmentRecommendationController/Add")]
+        [Route("api/InvestmentRecommendationController/AddRatio")]
         [HttpPost]
-        public Result Add(InvestmentRecommendation InvestmentRecommendation)
+        public Result Add(InvestmentRecommendationRatio investmentRecommendationRatio)
         {
 
             var result = new Result();
             try
             {
-                //CashFlowService cashFlowService = new CashFlowService();
-                //cashFlowService.Add(InvestmentRecommendation);
-                result.IsSuccess = true;
-            }
-            catch (Exception exception)
-            {
-                result.IsSuccess = false;
-                result.ExceptionInfo = exception;
-            }
-            return result;
-        }
-
-        [Route("api/InvestmentRecommendationController/Update")]
-        [HttpPost]
-        public Result Update(InvestmentRecommendation InvestmentRecommendation)
-        {
-            var result = new Result();
-            try
-            {
-                //CashFlowService cashFlowService = new CashFlowService();
-                //cashFlowService.Update(InvestmentRecommendation);
-                result.IsSuccess = true;
-            }
-            catch (Exception exception)
-            {
-                result.IsSuccess = false;
-                result.ExceptionInfo = exception;
-            }
-            return result;
-        }
-
-        [Route("api/InvestmentRecommendationController/Delete")]
-        [HttpPost]
-        public Result Delete(InvestmentRecommendation cashFlow)
-        {
-            var result = new Result();
-            try
-            {
-                //CashFlowService cashFlowService = new CashFlowService();
-                //cashFlowService.Delete(cashFlow);
+                InvestmentRecommendationService investmentRecommendationService = new InvestmentRecommendationService();
+                investmentRecommendationService.Add(investmentRecommendationRatio);           
                 result.IsSuccess = true;
             }
             catch (Exception exception)

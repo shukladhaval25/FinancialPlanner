@@ -124,6 +124,7 @@
     <Compile Include="Controllers\Planner\GoalsController.cs" />
     <Compile Include="Controllers\Planner\IncomeController.cs" />
     <Compile Include="Controllers\Planner\LoanController.cs" />
+    <Compile Include="Controllers\Planner\SIPInvRecController.cs" />
     <Compile Include="Controllers\Planner\LumsumInvRecController.cs" />
     <Compile Include="Controllers\Planner\NonFinancialAssetController.cs" />
     <Compile Include="Controllers\Planner\PlannerAssumptionController.cs" />
@@ -132,6 +133,7 @@
     <Compile Include="Controllers\Planner\RecommendedSchemesController.cs" />
     <Compile Include="Controllers\Planner\RiskProfileInvestmentSegmentController.cs" />
     <Compile Include="Controllers\Planner\RiskProfileReturnController.cs" />
+    <Compile Include="Controllers\Planner\STPInvRecController.cs" />
     <Compile Include="Controllers\PlanOptions\CashFlowController.cs" />
     <Compile Include="Controllers\PlanOptions\CurrentStatusToGoalController.cs" />
     <Compile Include="Controllers\PlanOptions\InvestmentRecommendationController.cs" />

@@ -41,5 +41,25 @@ namespace FinancialPlanner.Controllers
             }
             return result;
         }
+
+        [Route("api/LumsumInvRecController/Delete")]
+        [HttpPost]
+        public Result Delete(LumsumInvestmentRecomendation lumsumInvestmentRecomendation)
+        {
+            var result = new Result();
+            try
+            {
+                LumsumInvestmentRecomendationService lumsumInvestmentRecomendationService =
+                     new LumsumInvestmentRecomendationService();
+                lumsumInvestmentRecomendationService.Delete(lumsumInvestmentRecomendation);
+                result.IsSuccess = true;
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
+        }
     }
 }
