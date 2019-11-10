@@ -22,7 +22,7 @@ namespace FinancialPlanner.Controllers
             result.Value = (IList<Client>)lstClient;
             result.IsSuccess = true;
             return result;
-        }
+        }       
 
         [Route("api/Client/GetById")]
         [HttpGet]
@@ -107,5 +107,78 @@ namespace FinancialPlanner.Controllers
             }
             return result;
         }
+        #region "Client ARN Controller"
+
+        [HttpPost]
+        [Route("api/ClientARN/Add")]
+        public Result Add(ClientARN client)
+        {
+            var result = new Result();
+            try
+            {
+                ClientService clientService = new ClientService();
+                clientService.InsertARN(client);
+                result.IsSuccess = true;
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
+        }
+
+        [HttpPost]
+        [Route("api/ClientARN/Update")]
+        public Result Update(ClientARN client)
+        {
+            var result = new Result();
+            try
+            {
+                ClientService clientService = new ClientService();
+                clientService.UpdateARN(client);
+                result.IsSuccess = true;
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
+        }
+
+        [Route("api/ClientARN/Delete")]
+        [HttpDelete]
+        public Result Delete(ClientARN client)
+        {
+            var result = new Result();
+            try
+            {
+                ClientService clientService = new ClientService();
+                clientService.DeleteARN(client);
+                result.IsSuccess = true;
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
+        }
+
+        [Route("api/ClientARN/GetARN")]
+        [HttpGet]
+        public Result<ClientARN> GetARN(int clientId)
+        {
+            var result = new Result<ClientARN>();
+            ClientService clientService = new ClientService();
+
+            var client = clientService.GetARN(clientId);
+            result.Value = (ClientARN)client;
+            result.IsSuccess = true;
+            return result;
+        }
+
+        #endregion
     }
 }
