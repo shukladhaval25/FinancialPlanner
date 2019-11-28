@@ -142,6 +142,7 @@
     <Compile Include="Controllers\SessionController.cs" />
     <Compile Include="Controllers\TaskManagement\TaskCommentController.cs" />
     <Compile Include="Controllers\TaskManagement\TaskController.cs" />
+    <Compile Include="Controllers\TaskManagement\TaskHistoryController.cs" />
     <Compile Include="Controllers\TaskManagement\TaskNotificationController.cs" />
     <Compile Include="Controllers\TaskManagement\TaskProjectController.cs" />
     <Compile Include="Controllers\UserController.cs" />
