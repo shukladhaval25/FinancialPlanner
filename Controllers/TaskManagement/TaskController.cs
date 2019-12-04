@@ -78,6 +78,32 @@ namespace FinancialPlanner.Controllers.TaskManagement
             return result;
         }
 
+        [Route("api/TaskController/GetUserPerformanceForYear")]
+        [HttpGet]
+        public Result<IList<UserPerformanceOnTask>> GetUserPerformanceForYear(int userId)
+        {
+            var result = new Result<IList<UserPerformanceOnTask>>();
+            TaskService taskService = new TaskService();
+
+            var taskCards = taskService.GetUserPerformanceForYear(userId);
+            result.Value = (IList<UserPerformanceOnTask>)taskCards;
+            result.IsSuccess = true;
+            return result;
+        }
+
+        [Route("api/TaskController/GetCompanyTaskPerformanceForYear")]
+        [HttpGet]
+        public Result<IList<UserPerformanceOnTask>> GetCompanyTaskPerformanceForYear()
+        {
+            var result = new Result<IList<UserPerformanceOnTask>>();
+            TaskService taskService = new TaskService();
+
+            var taskCards = taskService.GetCompanyTaskPerformanceForYear();
+            result.Value = (IList<UserPerformanceOnTask>)taskCards;
+            result.IsSuccess = true;
+            return result;
+        }
+
         [Route("api/TaskController/GetTaskByProjectAndUser")]
         [HttpGet]
         public Result<IList<TaskCard>> GetTaskByProjectAndUser(string projetName, int userId)

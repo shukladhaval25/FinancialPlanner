@@ -119,6 +119,8 @@
     <Compile Include="Controllers\Masters\ClientRatingController.cs" />
     <Compile Include="Controllers\Masters\SchemeCategoryController.cs" />
     <Compile Include="Controllers\Masters\SchemeController.cs" />
+    <Compile Include="Controllers\Permissions\FormsController.cs" />
+    <Compile Include="Controllers\Permissions\RolePermissionController.cs" />
     <Compile Include="Controllers\Planner\DocumentController.cs" />
     <Compile Include="Controllers\Planner\ExpensesController.cs" />
     <Compile Include="Controllers\Planner\GoalsController.cs" />
