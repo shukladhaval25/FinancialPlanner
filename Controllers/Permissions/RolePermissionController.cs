@@ -23,5 +23,63 @@ namespace FinancialPlanner.Controllers.Permissions
             result.IsSuccess = true;
             return result;
         }
+
+        [Route("api/RolePermission/Add")]
+        [HttpPost]
+        public async Task<Result> Add(Role role)
+        {
+            var result = new Result();
+            try
+            {
+                RolePermissionService rolePermissionService = new RolePermissionService();
+                await rolePermissionService.Add(role);
+                result.IsSuccess = true;
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
+        }
+
+        [Route("api/RolePermission/Update")]
+        [HttpPost]
+        public async Task<Result> Update(Role role)
+        {
+            var result = new Result();
+            try
+            {
+                RolePermissionService rolePermissionService = new RolePermissionService();
+                await rolePermissionService.Update(role);
+                result.IsSuccess = true;
+                
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
+        }
+
+        [Route("api/RolePermission/Delete")]
+        [HttpPost]
+        public async Task<Result> Delete(Role role)
+        {
+            var result = new Result();
+            try
+            {
+                RolePermissionService rolePermissionService = new RolePermissionService();
+                await rolePermissionService.Delete(role);
+                result.IsSuccess = true;
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
+        }
     }
 }
