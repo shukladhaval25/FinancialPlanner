@@ -23,6 +23,16 @@ namespace FinancialPlanner.Controllers.Permissions
             result.IsSuccess = true;
             return result;
         }
+        [Route("api/RolePermission/Get")]
+        [HttpGet]
+        public Result<Role> Get(int roleId)
+        {
+            var result = new Result<Role>();
+            RolePermissionService rolePermissionService = new RolePermissionService();
+            result.Value = rolePermissionService.Get(roleId);
+            result.IsSuccess = true;
+            return result;
+        }
 
         [Route("api/RolePermission/Add")]
         [HttpPost]
