@@ -42,5 +42,34 @@ namespace FinancialPlanner.Controllers.PlanOptions
             }
             return result;
         }
+
+        [Route("api/InvestmentRecommendationController/AddSendReport")]
+        public Result AddSendReport(InvRecommendationSend invRecommendationSend)
+        {
+            var result = new Result();
+            try
+            {
+                InvestmentRecommendationService investmentRecommendationService = new InvestmentRecommendationService();
+                investmentRecommendationService.AddSendReport(invRecommendationSend);
+                result.IsSuccess = true;
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
+        }
+
+        [Route("api/InvestmentRecommendationController/GetSendReports")]
+        [HttpGet]
+        public Result<IList<InvRecommendationSend>> GetSendReports(int plannerId)
+        {
+            var result = new Result<IList<InvRecommendationSend>>();
+            InvestmentRecommendationService investmentRecommendationService = new InvestmentRecommendationService();
+            result.Value = investmentRecommendationService.GetSendReports(plannerId);
+            result.IsSuccess = true;
+            return result;
+        }
     }
 }
