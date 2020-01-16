@@ -81,6 +81,7 @@
     <Compile Include="Controllers\AreaController.cs" />
     <Compile Include="Controllers\AuthenticationController.cs" />
     <Compile Include="Controllers\BankAccountController.cs" />
+    <Compile Include="Controllers\ClientSessionController.cs" />
     <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Controllers\Masters\BankController.cs" />
     <Compile Include="Controllers\ClientContactController.cs" />
@@ -137,11 +138,13 @@
     <Compile Include="Controllers\Planner\RiskProfileInvestmentSegmentController.cs" />
     <Compile Include="Controllers\Planner\RiskProfileReturnController.cs" />
     <Compile Include="Controllers\Planner\STPInvRecController.cs" />
+    <Compile Include="Controllers\Planner\SwitchInvRecController.cs" />
     <Compile Include="Controllers\PlanOptions\CashFlowController.cs" />
     <Compile Include="Controllers\PlanOptions\CurrentStatusToGoalController.cs" />
     <Compile Include="Controllers\PlanOptions\InvestmentRecommendationController.cs" />
     <Compile Include="Controllers\PlanOptions\PlanOptionController.cs" />
     <Compile Include="Controllers\ProspectClientController.cs" />
+    <Compile Include="Controllers\QuarterlyReviewTemplateController.cs" />
     <Compile Include="Controllers\SessionController.cs" />
     <Compile Include="Controllers\TaskManagement\TaskCommentController.cs" />
     <Compile Include="Controllers\TaskManagement\TaskController.cs" />
@@ -163,9 +166,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\FinancialPlanner.BusinessLogic\FinancialPlanner.BusinessLogic.csproj">
       <Project>{de9b4746-e5bf-478b-94bc-123948e590fe}</Project>
