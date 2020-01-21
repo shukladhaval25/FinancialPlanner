@@ -30,6 +30,8 @@ namespace FinancialPlanner.Controllers.CurrentStatus
             return result;
         }
 
+        
+
         [Route("api/LifeInsurance/Add")]
         [HttpPost]
         public Result Add(LifeInsurance lifeInsurance)
