@@ -21,6 +21,17 @@ namespace FinancialPlanner.Controllers.CurrentStatus
             return result;
         }
 
+        [Route("api/PPF/GetMaturity")]
+        [HttpGet]
+        public Result<IList<PPFMaturity>> GetMaturity(DateTime from,DateTime to)
+        {
+            var result = new Result<IList<PPFMaturity>>();
+            PPFService PPFService = new PPFService();
+            result.Value = PPFService.GetPPFMaturity(from, to);
+            result.IsSuccess = true;
+            return result;
+        }
+
         [Route("api/PPF/Get")]
         [HttpGet]
         public Result<PPF> Get(int id)
