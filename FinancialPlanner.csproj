@@ -152,6 +152,7 @@
     <Compile Include="Controllers\TaskManagement\TaskHistoryController.cs" />
     <Compile Include="Controllers\TaskManagement\TaskNotificationController.cs" />
     <Compile Include="Controllers\TaskManagement\TaskProjectController.cs" />
+    <Compile Include="Controllers\TaskManagement\TaskReminderController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
