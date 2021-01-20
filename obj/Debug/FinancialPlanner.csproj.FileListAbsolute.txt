@@ -35,3 +35,20 @@ C:\Application Development\Financial Planner Project\FinancialPlanner\obj\Debug\
 C:\Application Development\Financial Planner Project\FinancialPlanner\obj\Debug\FinancialPlanner.dll
 C:\Application Development\Financial Planner Project\FinancialPlanner\obj\Debug\FinancialPlanner.pdb
 C:\Application Development\Financial Planner Project\FinancialPlanner\bin\ChilkatDotNet4.dll
+C:\Application Softwares\FinancialPlanner\bin\FinancialPlanner.dll.config
+C:\Application Softwares\FinancialPlanner\bin\FinancialPlanner.dll
+C:\Application Softwares\FinancialPlanner\bin\FinancialPlanner.pdb
+C:\Application Softwares\FinancialPlanner\bin\FinancialPlanner.BusinessLogic.dll
+C:\Application Softwares\FinancialPlanner\bin\FinancialPlanner.Common.dll
+C:\Application Softwares\FinancialPlanner\bin\log4net.dll
+C:\Application Softwares\FinancialPlanner\bin\Newtonsoft.Json.dll
+C:\Application Softwares\FinancialPlanner\bin\ChilkatDotNet4.dll
+C:\Application Softwares\FinancialPlanner\bin\FinancialPlanner.BusinessLogic.pdb
+C:\Application Softwares\FinancialPlanner\bin\FinancialPlanner.BusinessLogic.dll.config
+C:\Application Softwares\FinancialPlanner\bin\FinancialPlanner.Common.pdb
+C:\Application Softwares\FinancialPlanner\bin\FinancialPlanner.Common.dll.config
+C:\Application Softwares\FinancialPlanner\obj\Debug\FinancialPlanner.csproj.CoreCompileInputs.cache
+C:\Application Softwares\FinancialPlanner\obj\Debug\FinancialPlanner.csproj.CopyComplete
+C:\Application Softwares\FinancialPlanner\obj\Debug\FinancialPlanner.dll
+C:\Application Softwares\FinancialPlanner\obj\Debug\FinancialPlanner.pdb
+C:\Application Softwares\FinancialPlanner\obj\Debug\FinancialPlanner.csprojAssemblyReference.cache

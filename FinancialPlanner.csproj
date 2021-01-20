@@ -40,6 +40,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FinancialPlanner.BusinessLogic">
+      <HintPath>..\FinancialPlanner.BusinessLogic\bin\Debug\FinancialPlanner.BusinessLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="FinancialPlanner.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FinancialPlanner.Common\bin\Debug\FinancialPlanner.Common.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
@@ -72,7 +79,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Data\App_Start\WebApiConfig.cs" />
@@ -170,16 +179,6 @@
     </None>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\FinancialPlanner.BusinessLogic\FinancialPlanner.BusinessLogic.csproj">
-      <Project>{de9b4746-e5bf-478b-94bc-123948e590fe}</Project>
-      <Name>FinancialPlanner.BusinessLogic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FinancialPlanner.Common\FinancialPlanner.Common.csproj">
-      <Project>{77966dd0-e26f-4e18-8917-54088551c617}</Project>
-      <Name>FinancialPlanner.Common</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

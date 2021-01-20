@@ -45,6 +45,19 @@ namespace FinancialPlanner.Controllers
             return result;
         }
 
+        [Route("api/ClientContact/ClientWithPrimaryContact")]
+        [HttpGet]
+        public Result<List<ClientPrimaryContact>> GetPrimaryContact()
+        {
+            var result = new Result<List<ClientPrimaryContact>>();
+            ClientContactService clientContactService = new ClientContactService();
+
+            var lstClientContacts = clientContactService.GetPrimaryContact();
+            result.Value = (List<ClientPrimaryContact>)lstClientContacts;
+            result.IsSuccess = true;
+            return result;
+        }
+
         // PUT: api/ClientContact/5
         public void Put(int id, [FromBody]string value)
         {
