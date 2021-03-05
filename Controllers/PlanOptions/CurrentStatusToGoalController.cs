@@ -23,6 +23,36 @@ namespace FinancialPlanner.Controllers.PlanOptions
             return result;
         }
 
+        [Route("api/CurrentStatusToGoal/ContingencyFund")]
+        [HttpGet]
+        public Result<ContingencyFund> GetContingencyFund(int optionId, int planId)
+        {
+            Result<ContingencyFund> result = new Result<ContingencyFund>();
+            ContingencyFundSesrvice contingencyFundSesrvice = new ContingencyFundSesrvice();
+            result.Value = contingencyFundSesrvice.GetContingencyFund(optionId, planId);
+            result.IsSuccess = true;
+            return result;
+        }
+
+        [Route("api/CurrentStatusToGoal/ContingencyFund")]
+        [HttpPost]
+        public Result Update(ContingencyFund contingencyFund)
+        {
+            var result = new Result();
+            try
+            {
+                ContingencyFundSesrvice contingencyFundSesrvice = new ContingencyFundSesrvice();
+                contingencyFundSesrvice.Update(contingencyFund);
+                result.IsSuccess = true;
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
+        }
+
         [Route("api/CurrentStatusToGoal/Add")]
         [HttpPost]
         public Result Add(CurrentStatusToGoal CurrentStatusToGoal)

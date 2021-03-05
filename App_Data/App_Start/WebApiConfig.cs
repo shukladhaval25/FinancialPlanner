@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace FinancialPlanner
 {
@@ -9,6 +10,7 @@ namespace FinancialPlanner
     {
         public static void Register(HttpConfiguration config)
         {
+            config.EnableCors(new EnableCorsAttribute("http://localhost:4200","*","*"));
             // Web API configuration and services
 
             // Web API routes
@@ -19,6 +21,8 @@ namespace FinancialPlanner
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+          
+           
         }
     }
 }
