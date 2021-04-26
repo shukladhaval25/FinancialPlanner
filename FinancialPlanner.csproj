@@ -146,6 +146,7 @@
     <Compile Include="Controllers\Planner\GoalsController.cs" />
     <Compile Include="Controllers\Planner\IncomeController.cs" />
     <Compile Include="Controllers\Planner\LoanController.cs" />
+    <Compile Include="Controllers\Planner\NetWorthController.cs" />
     <Compile Include="Controllers\Planner\SIPInvRecController.cs" />
     <Compile Include="Controllers\Planner\LumsumInvRecController.cs" />
     <Compile Include="Controllers\Planner\NonFinancialAssetController.cs" />
@@ -179,8 +180,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="libman.json" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -10,22 +10,22 @@ namespace FinancialPlanner.Controllers
     {
         [Route("api/Planner/GetByClientId")]
         [HttpGet]
-        public Result<IList<Planner>> GetByClientId(int id)
+        public Result<IList<FinancialPlanner.Common.Model.Planner>> GetByClientId(int id)
         {
-            var result = new Result<IList<Planner>>();
+            var result = new Result<IList<FinancialPlanner.Common.Model.Planner>>();
             PlannerService plannerService = new PlannerService();
 
             var lstPlanner = plannerService.GetByClientId(id);
-            result.Value = (IList<Planner>)lstPlanner;
+            result.Value = (IList<FinancialPlanner.Common.Model.Planner>)lstPlanner;
             result.IsSuccess = true;
             return result;
         }
 
         [Route("api/Planner/GetByPlannerId")]
         [HttpGet]
-        public Result<Planner> GetByPlannerId(int id)
+        public Result<FinancialPlanner.Common.Model.Planner> GetByPlannerId(int id)
         {
-            var result = new Result<Planner>();
+            var result = new Result<FinancialPlanner.Common.Model.Planner>();
             PlannerService plannerService = new PlannerService();
 
             var planner = plannerService.GetByPlannerId(id);
@@ -36,7 +36,7 @@ namespace FinancialPlanner.Controllers
 
         [Route("api/Planner/Add")]
         [HttpPost]
-        public Result Add(Planner planner)
+        public Result Add(FinancialPlanner.Common.Model.Planner planner)
         {
             var result = new Result();
             try
@@ -55,7 +55,7 @@ namespace FinancialPlanner.Controllers
 
         [Route("api/Planner/Update")]
         [HttpPost]
-        public Result Update(Planner planner)
+        public Result Update(FinancialPlanner.Common.Model.Planner planner)
         {
             var result = new Result();
             try
@@ -74,7 +74,7 @@ namespace FinancialPlanner.Controllers
 
         [Route("api/Planner/Delete")]
         [HttpPost]
-        public Result Delete(Planner planner)
+        public Result Delete(FinancialPlanner.Common.Model.Planner planner)
         {
             var result = new Result();
             try

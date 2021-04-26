@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Application Softwares\FinancialPlanner</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/ChilkatDotNet4.dll">
+      <publishTime>08/17/2020 22:26:36</publishTime>
+    </File>
+    <File Include="bin/FinancialPlanner.BusinessLogic.dll">
+      <publishTime>03/17/2021 14:37:16</publishTime>
+    </File>
+    <File Include="bin/FinancialPlanner.BusinessLogic.dll.config">
+      <publishTime>01/29/2021 11:11:42</publishTime>
+    </File>
+    <File Include="bin/FinancialPlanner.BusinessLogic.pdb">
+      <publishTime>03/17/2021 14:37:16</publishTime>
+    </File>
+    <File Include="bin/FinancialPlanner.Common.dll">
+      <publishTime>03/05/2021 17:24:18</publishTime>
+    </File>
+    <File Include="bin/FinancialPlanner.Common.dll.config">
+      <publishTime>08/17/2020 22:26:36</publishTime>
+    </File>
+    <File Include="bin/FinancialPlanner.Common.pdb">
+      <publishTime>03/05/2021 17:24:18</publishTime>
+    </File>
+    <File Include="bin/FinancialPlanner.dll">
+      <publishTime>03/19/2021 11:30:55</publishTime>
+    </File>
+    <File Include="bin/FinancialPlanner.pdb">
+      <publishTime>03/19/2021 11:30:55</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>08/17/2020 22:26:36</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/03/2014 20:33:56</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>11/28/2018 13:00:36</publishTime>
+    </File>
+    <File Include="bin/System.Web.Cors.dll">
+      <publishTime>11/28/2018 12:58:44</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Cors.dll">
+      <publishTime>11/28/2018 13:01:26</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>11/28/2018 13:01:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>08/17/2020 22:42:44</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>08/17/2020 22:42:43</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/19/2021 11:30:55</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
