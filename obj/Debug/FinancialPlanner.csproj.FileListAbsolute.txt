@@ -59,3 +59,4 @@ C:\Application Softwares\FinancialPlanner\obj\Debug\FinancialPlanner.csproj.Core
 C:\Application Softwares\FinancialPlanner\obj\Debug\FinancialPlanner.csproj.CopyComplete
 C:\Application Softwares\FinancialPlanner\obj\Debug\FinancialPlanner.dll
 C:\Application Softwares\FinancialPlanner\obj\Debug\FinancialPlanner.pdb
+C:\Application Softwares\FinancialPlanner\obj\Debug\FinancialPlanner.csprojAssemblyReference.cache

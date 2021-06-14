@@ -47,12 +47,26 @@ namespace FinancialPlanner.Controllers
 
         [Route("api/ClientContact/ClientWithPrimaryContact")]
         [HttpGet]
-        public Result<List<ClientPrimaryContact>> GetPrimaryContact()
+        public Result<List<ClientPrimaryContact>> GetPrimaryContact(DateTime dateTime)
         {
             var result = new Result<List<ClientPrimaryContact>>();
             ClientContactService clientContactService = new ClientContactService();
 
-            var lstClientContacts = clientContactService.GetPrimaryContact();
+            var lstClientContacts = clientContactService.GetPrimaryContact(dateTime);
+            result.Value = (List<ClientPrimaryContact>)lstClientContacts;
+            result.IsSuccess = true;
+            return result;
+        }
+
+
+        [Route("api/ClientContact/GetAnnualReviewContact")]
+        [HttpGet]
+        public Result<List<ClientPrimaryContact>> GetAnnualReviewContact(DateTime dateTime)
+        {
+            var result = new Result<List<ClientPrimaryContact>>();
+            ClientContactService clientContactService = new ClientContactService();
+
+            var lstClientContacts = clientContactService.GetPrimaryContact(dateTime,true);
             result.Value = (List<ClientPrimaryContact>)lstClientContacts;
             result.IsSuccess = true;
             return result;
