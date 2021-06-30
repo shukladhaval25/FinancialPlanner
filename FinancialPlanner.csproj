@@ -165,6 +165,8 @@
     <Compile Include="Controllers\ProspectClientController.cs" />
     <Compile Include="Controllers\QuarterlyReviewTemplateController.cs" />
     <Compile Include="Controllers\Reports\PremiumReminderController.cs" />
+    <Compile Include="Controllers\ScoreCalculation\ScoreController.cs" />
+    <Compile Include="Controllers\ScoreCalculation\ScoreEntryController.cs" />
     <Compile Include="Controllers\SessionController.cs" />
     <Compile Include="Controllers\TaskManagement\TaskCommentController.cs" />
     <Compile Include="Controllers\TaskManagement\TaskController.cs" />
