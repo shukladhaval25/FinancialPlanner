@@ -49,8 +49,8 @@
       <HintPath>..\FinancialPlanner.Common\bin\Debug\FinancialPlanner.Common.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
@@ -101,6 +101,7 @@
     <Compile Include="Controllers\BankAccountController.cs" />
     <Compile Include="Controllers\ClientSessionController.cs" />
     <Compile Include="Controllers\CommonController.cs" />
+    <Compile Include="Controllers\FeesInvoiceController.cs" />
     <Compile Include="Controllers\Masters\BankController.cs" />
     <Compile Include="Controllers\ClientContactController.cs" />
     <Compile Include="Controllers\ClientController.cs" />
@@ -139,6 +140,7 @@
     <Compile Include="Controllers\Masters\ClientRatingController.cs" />
     <Compile Include="Controllers\Masters\SchemeCategoryController.cs" />
     <Compile Include="Controllers\Masters\SchemeController.cs" />
+    <Compile Include="Controllers\MOMController.cs" />
     <Compile Include="Controllers\Permissions\FormsController.cs" />
     <Compile Include="Controllers\Permissions\RolePermissionController.cs" />
     <Compile Include="Controllers\Planner\DocumentController.cs" />
@@ -192,7 +194,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Start\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
