@@ -13,7 +13,7 @@ namespace FinancialPlanner.Controllers
         public Result<IList<NonFinancialAsset>> GetAll(int plannerId)
         {
             var result = new Result<IList<NonFinancialAsset>>();
-            NonFinancialAssetService nonFinanacialAssetService = new NonFinancialAssetService();           
+            NonFinancialAssetService nonFinanacialAssetService = new NonFinancialAssetService();
             result.Value = nonFinanacialAssetService.GetAll(plannerId);
             result.IsSuccess = true;
             return result;
@@ -26,6 +26,17 @@ namespace FinancialPlanner.Controllers
             var result = new Result<NonFinancialAsset>();
             NonFinancialAssetService nonFinanacialAssetService = new NonFinancialAssetService();
             result.Value = nonFinanacialAssetService.GetByID(id, plannerId);
+            result.IsSuccess = true;
+            return result;
+        }
+
+        [Route("api/NonFinancialAsset/MappedGoal")]
+        [HttpGet]
+        public Result<IList<NonFinancialAsset>> GetByMappedGoalId(int mappedGoalId)
+        {
+            var result = new Result<IList<NonFinancialAsset>>();
+            NonFinancialAssetService nonFinanacialAssetService = new NonFinancialAssetService();
+            result.Value = nonFinanacialAssetService.GetByMappedGoalId(mappedGoalId);
             result.IsSuccess = true;
             return result;
         }

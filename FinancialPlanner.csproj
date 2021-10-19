@@ -147,6 +147,7 @@
     <Compile Include="Controllers\Planner\ExpensesController.cs" />
     <Compile Include="Controllers\Planner\GoalsController.cs" />
     <Compile Include="Controllers\Planner\IncomeController.cs" />
+    <Compile Include="Controllers\Planner\InsuranceRecomendationController.cs" />
     <Compile Include="Controllers\Planner\LoanController.cs" />
     <Compile Include="Controllers\Planner\NetWorthController.cs" />
     <Compile Include="Controllers\Planner\SIPInvRecController.cs" />

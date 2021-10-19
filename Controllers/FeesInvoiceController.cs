@@ -100,5 +100,16 @@ namespace FinancialPlanner.Controllers
             }
             return result;
         }
+
+        [Route("api/FeesInvoice/GetMaxInvoiceId")]
+        [HttpGet]
+        public Result<string> GetMaxInvoiceId(string year)
+        {
+            var result = new Result<string>();
+            FeesInvoiceService feesInvoice = new FeesInvoiceService();
+            result.Value = feesInvoice.GetMaxInvoiceId(year);
+            result.IsSuccess = true;
+            return result;
+        }
     }
 }
