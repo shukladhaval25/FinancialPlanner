@@ -39,5 +39,62 @@ namespace FinancialPlanner.Controllers.Planner
             }
             return result;
         }
+
+        [Route("api/InsuranceRecomendation/Update")]
+        [HttpPost]
+        public Result Update(InsuranceRecomendationTransaction transaction)
+        {
+            var result = new Result();
+            try
+            {
+                InsuranceRecomendationService insuranceRecomendationService = new InsuranceRecomendationService();
+                insuranceRecomendationService.Update(transaction);
+                result.IsSuccess = true;
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
+        }
+
+        [Route("api/InsuranceRecomendation/Delete")]
+        [HttpDelete]
+        public Result Delete(int Id)
+        {
+            var result = new Result();
+            try
+            {
+                InsuranceRecomendationService insuranceRecomendationService = new InsuranceRecomendationService();
+                insuranceRecomendationService.DeleteInsuranceRecomendation(Id);
+                result.IsSuccess = true;
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
+        }
+
+        [Route("api/InsuranceRecomendationDetail/Delete")]
+        [HttpDelete]
+        public Result DeleteMOM(string companyName, int Id)
+        {
+            var result = new Result();
+            try
+            {
+                InsuranceRecomendationService insuranceRecomendationService = new InsuranceRecomendationService();
+                insuranceRecomendationService.DeleteInsuranceRecDetail(companyName,Id);
+                result.IsSuccess = true;
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
+        }
     }
 }
