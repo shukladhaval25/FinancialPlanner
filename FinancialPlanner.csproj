@@ -143,10 +143,13 @@
     <Compile Include="Controllers\Masters\SchemeCategoryController.cs" />
     <Compile Include="Controllers\Masters\SchemeController.cs" />
     <Compile Include="Controllers\MOMController.cs" />
+    <Compile Include="Controllers\OtherRecommendationSettingController.cs" />
     <Compile Include="Controllers\Permissions\FormsController.cs" />
     <Compile Include="Controllers\Permissions\RolePermissionController.cs" />
     <Compile Include="Controllers\PersonalAccidentInsuranceController.cs" />
+    <Compile Include="Controllers\Planner\AssumptionConfigController.cs" />
     <Compile Include="Controllers\Planner\DocumentController.cs" />
+    <Compile Include="Controllers\Planner\ExistingInsuranceController.cs" />
     <Compile Include="Controllers\Planner\ExpensesController.cs" />
     <Compile Include="Controllers\Planner\GoalsController.cs" />
     <Compile Include="Controllers\Planner\IncomeController.cs" />

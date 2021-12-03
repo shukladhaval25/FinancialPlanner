@@ -45,13 +45,13 @@ namespace FinancialPlanner.Controllers
 
         [Route("api/PersonalAccidentInsurance/Delete")]
         [HttpDelete]
-        public Result Delete(PersonalAccidentInsurance PersonalAccidentInsurance)
+        public Result Delete(int Id)
         {
             var result = new Result();
             try
             {
                 PersonalAccidentInsuranceService PersonalAccidentInsuranceService = new PersonalAccidentInsuranceService();
-                PersonalAccidentInsuranceService.Delete(PersonalAccidentInsurance);
+                PersonalAccidentInsuranceService.Delete(Id);
                 result.IsSuccess = true;
             }
             catch (Exception exception)
