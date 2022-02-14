@@ -171,6 +171,7 @@
     <Compile Include="Controllers\PlanOptions\CurrentStatusToGoalController.cs" />
     <Compile Include="Controllers\PlanOptions\InvestmentRecommendationController.cs" />
     <Compile Include="Controllers\PlanOptions\PlanOptionController.cs" />
+    <Compile Include="Controllers\Processes\ClientProcessController.cs" />
     <Compile Include="Controllers\Processes\DesignationHeirarchyController.cs" />
     <Compile Include="Controllers\ProspectClientController.cs" />
     <Compile Include="Controllers\QuarterlyReviewTemplateController.cs" />
