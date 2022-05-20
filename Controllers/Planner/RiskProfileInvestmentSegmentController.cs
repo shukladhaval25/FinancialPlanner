@@ -20,6 +20,17 @@ namespace FinancialPlanner.Controllers
             return result;
         }
 
+        [Route("api/RiskProfileInvestmentSegment/ModelPortfolio")]
+        [HttpGet]
+        public Result<IList<ModelPortfolio>> ModelPortfilio(int riskProfileId)
+        {
+            var result = new Result<IList<ModelPortfolio>>();
+            InvestmentSegmentService invSegmentService = new InvestmentSegmentService();
+            result.Value = invSegmentService.GetModelPorfolio(riskProfileId);
+            result.IsSuccess = true;
+            return result;
+        }
+
         [Route("api/RiskProfileInvestmentSegment/Add")]
         [HttpPost]
         public Result Add(InvestmentSegment investmentSegment)

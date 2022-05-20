@@ -19,6 +19,17 @@ namespace FinancialPlanner.Controllers
             return result;
         }
 
+        [Route("api/Document/GetAllKYC")]
+        [HttpGet]
+        public Result<IList<Document>> GetAllWithKYC(int clientId,int plannerId)
+        {
+            var result = new Result<IList<Document>>();
+            DocumentService DocumentService = new DocumentService();
+            result.Value = DocumentService.GetAllByClientId(clientId,plannerId);
+            result.IsSuccess = true;
+            return result;
+        }
+
         [Route("api/Document/GetByID")]
         [HttpGet]
         public Result<Document> Get(int id, int plannerId)

@@ -101,6 +101,8 @@
     <Compile Include="Controllers\BankAccountController.cs" />
     <Compile Include="Controllers\ClientSessionController.cs" />
     <Compile Include="Controllers\CommonController.cs" />
+    <Compile Include="Controllers\CustomAuthorizationAttribute.cs" />
+    <Compile Include="Controllers\CustomNotifierController.cs" />
     <Compile Include="Controllers\FeesInvoiceController.cs" />
     <Compile Include="Controllers\Masters\BankController.cs" />
     <Compile Include="Controllers\ClientContactController.cs" />

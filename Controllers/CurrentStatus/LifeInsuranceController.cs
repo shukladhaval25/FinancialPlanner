@@ -70,7 +70,7 @@ namespace FinancialPlanner.Controllers.CurrentStatus
             return result;
         }
 
-        [Route("api/LifeInsurance/Delet")]
+        [Route("api/LifeInsurance/Delete")]
         [HttpPost]
         public Result Delete(LifeInsurance lifeInsurance)
         {

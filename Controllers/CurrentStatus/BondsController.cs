@@ -31,6 +31,19 @@ namespace FinancialPlanner.Controllers.CurrentStatus
             return result;
         }
 
+        [Route("api/Bonds/GetMaturity")]
+        [HttpGet]
+        public Result<IList<Bonds>> GetMaturity(DateTime from, DateTime to)
+        {
+            var result = new Result<IList<Bonds>>();
+            BondsService BondsService = new BondsService();
+            result.Value = BondsService.GeMaturity(from, to);
+            result.IsSuccess = true;
+            return result;
+        }
+
+
+
         [Route("api/Bonds/Add")]
         [HttpPost]
         public Result Add(Bonds bonds)

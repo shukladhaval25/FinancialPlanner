@@ -13,6 +13,7 @@ namespace FinancialPlanner.Controllers
     {
         [Route("api/Client/Get")]
         [HttpGet]
+        //[CustomAuthorization]
         public Result<IList<Client>> Get()
         {
             var result = new Result<IList<Client>>();
@@ -26,6 +27,7 @@ namespace FinancialPlanner.Controllers
 
         [Route("api/Client/GetById")]
         [HttpGet]
+        //[CustomAuthorization]
         public Result<Client> GetById(int id)
         {
             var result = new Result<Client>();

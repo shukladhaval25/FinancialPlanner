@@ -31,6 +31,18 @@ namespace FinancialPlanner.Controllers.CurrentStatus
             return result;
         }
 
+        [Route("api/FixedDeposit/GetMaturity")]
+        [HttpGet]
+        public Result<IList<FixedDeposit>> GetMaturity(DateTime from, DateTime to)
+        {
+            var result = new Result<IList<FixedDeposit>>();
+            FixedDepositService PPFService = new FixedDepositService();
+            result.Value = PPFService.GetFDMaturity(from, to);
+            result.IsSuccess = true;
+            return result;
+        }
+
+
         [Route("api/FixedDeposit/Add")]
         [HttpPost]
         public Result Add(FixedDeposit FixedDeposit)

@@ -33,6 +33,17 @@ namespace FinancialPlanner.Controllers.Processes
             return result;
         }
 
+        [Route("api/ProcessAction/GetLinkSubStepsByRefTaskId")]
+        [HttpGet]
+        public Result<IList<LinkSubStep>> GetLinkSubStepsByRefTaskId(string refTaskId)
+        {
+            var result = new Result<IList<LinkSubStep>>();
+            ProcessService processService = new ProcessService();
+            result.Value = processService.GetLinkSubStepsByRefTaskId(refTaskId);
+            result.IsSuccess = true;
+            return result;
+        }
+
 
         //[Route("api/ProcessAction/GetByID")]
         //[HttpGet]
