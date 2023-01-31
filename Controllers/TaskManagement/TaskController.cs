@@ -26,6 +26,19 @@ namespace FinancialPlanner.Controllers.TaskManagement
             return result;
         }
 
+        [Route("api/TaskController/GetAllTaskWithCommets")]
+        [HttpGet]
+        public Result<IList<TaskCardWithComments>> GetAllTaskWithComments()
+        {
+            var result = new Result<IList<TaskCardWithComments>>();
+            TaskService taskService = new TaskService();
+
+            var taskCards = taskService.GetAllTaskWithComments();
+            result.Value = (IList<TaskCardWithComments>)taskCards;
+            result.IsSuccess = true;
+            return result;
+        }
+
         [Route("api/TaskController/GetTaskByTaskId")]
         [HttpGet]
         public Result<IList<TaskCard>> GetTaskByTaskId(string taskId)

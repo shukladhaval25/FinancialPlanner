@@ -61,6 +61,25 @@ namespace FinancialPlanner.Controllers
             return result;
         }
 
+        [Route("api/MOM/UpdateEmailSenDate")]
+        [HttpPost]
+        public Result UpdateEmailSendDate(MOMTransaction mOMTransaction)
+        {
+            var result = new Result();
+            try
+            {
+                MOMService momService = new MOMService();
+                momService.UpdateEmailSenDate (mOMTransaction);
+                result.IsSuccess = true;
+            }
+            catch (Exception exception)
+            {
+                result.IsSuccess = false;
+                result.ExceptionInfo = exception;
+            }
+            return result;
+        }
+
         [Route("api/MOMPOints/Delete")]
         [HttpDelete]
         public Result Delete(int Id)

@@ -20,6 +20,18 @@ namespace FinancialPlanner.Controllers
             return result;
         }
 
+        [Route("api/Goals/GetMaxPriority")]
+        [HttpGet]
+        //Authorize]
+        public Result<int> GetMaxPriorty(int plannerId)
+        {
+            var result = new Result<int>();
+            GoalsService GoalsService = new GoalsService();
+            result.Value = GoalsService.GetMaxPriorty(plannerId);
+            result.IsSuccess = true;
+            return result;
+        }
+
         [Route("api/Goals/GetByID")]
         [HttpGet]
         public Result<Goals> Get(int id, int plannerId)
