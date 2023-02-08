@@ -1,5 +1,6 @@
 using FinancialPlanner.BusinessLogic.Approval;
 using FinancialPlanner.Common.Model;
+using FinancialPlanner.Common.Model.Approval;
 using FinancialPlanner.Common.Model.CurrentStatus;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,17 @@ namespace FinancialPlanner.Controllers.Approval
             var result = new Result<IList<ApprovalDTO>>();
             ApprovalService approvalService = new ApprovalService();
             result.Value = approvalService.GetApprovals(approvalType, userId);
+            result.IsSuccess = true;
+            return result;
+        }
+
+        [Route("api/Approval/GetApprovalItemsById")]
+        [HttpGet]
+        public Result<IList<ApprovalDTO>> GetApprovalItemsById(int itemId)
+        {
+            var result = new Result<IList<ApprovalDTO>>();
+            ApprovalService approvalService = new ApprovalService();
+            result.Value = approvalService.GetApprovals(itemId);
             result.IsSuccess = true;
             return result;
         }
