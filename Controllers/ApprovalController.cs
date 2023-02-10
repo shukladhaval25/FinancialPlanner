@@ -53,13 +53,13 @@ namespace FinancialPlanner.Controllers.Approval
 
         [Route("api/Approval/Approve")]
         [HttpPost]
-        public Result Approve(ApprovalDTO approval)
+        public Result<bool> Approve(ApprovalDTO approval)
         {
-            var result = new Result();
+            Result<bool> result = new Result<bool>();
             try
             {
                 ApprovalService approvalService = new ApprovalService();
-                approvalService.Approved(approval);
+                result.Value = approvalService.Approved(approval);
                 result.IsSuccess = true;
             }
             catch (Exception exception)
@@ -74,11 +74,11 @@ namespace FinancialPlanner.Controllers.Approval
         [HttpPost]
         public Result Reject(ApprovalDTO approval)
         {
-            var result = new Result();
+            Result<bool> result = new Result<bool>();
             try
             {
                 ApprovalService approvalService = new ApprovalService();
-                approvalService.Reject(approval);
+                result.Value = approvalService.Reject(approval);
                 result.IsSuccess = true;
             }
             catch (Exception exception)
@@ -91,13 +91,13 @@ namespace FinancialPlanner.Controllers.Approval
 
         [Route("api/Approval/Reassign")]
         [HttpPost]
-        public Result Reassign(ApprovalDTO approval)
+        public Result<bool> Reassign(ApprovalDTO approval)
         {
-            var result = new Result();
+            Result<bool> result = new Result<bool>();
             try
             {
                 ApprovalService approvalService = new ApprovalService();
-                approvalService.Reassign(approval);
+                result.Value =  approvalService.Reassign(approval);
                 result.IsSuccess = true;
             }
             catch (Exception exception)
