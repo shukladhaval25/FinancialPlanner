@@ -14,13 +14,13 @@ namespace FinancialPlanner.Controllers
         [Route("api/Client/Get")]
         [HttpGet]
         //[CustomAuthorization]
-        public Result<IList<Client>> Get()
+        public Result<string> Get()
         {
-            var result = new Result<IList<Client>>();
+            var result = new Result<string>();
             ClientService clientService = new ClientService();
 
             var lstClient = clientService.Get();
-            result.Value = (IList<Client>)lstClient;
+            result.Value = (string)lstClient;
             result.IsSuccess = true;
             return result;
         }       

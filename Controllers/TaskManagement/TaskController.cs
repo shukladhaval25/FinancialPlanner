@@ -15,26 +15,26 @@ namespace FinancialPlanner.Controllers.TaskManagement
     {
         [Route("api/TaskController/GetAll")]
         [HttpGet]
-        public Result<IList<TaskCard>> GetAll(int projectId)
+        public Result<string> GetAll(int projectId)
         {
-            var result = new Result<IList<TaskCard>>();
+            var result = new Result<string>();
             TaskService taskService = new TaskService();
 
             var taskCards = taskService.GetAll();
-            result.Value = (IList<TaskCard>)taskCards;
+            result.Value = taskCards;
             result.IsSuccess = true;
             return result;
         }
 
         [Route("api/TaskController/GetAllTaskWithCommets")]
         [HttpGet]
-        public Result<IList<TaskCardWithComments>> GetAllTaskWithComments()
+        public Result<string> GetAllTaskWithComments()
         {
-            var result = new Result<IList<TaskCardWithComments>>();
+            var result = new Result<string>();
             TaskService taskService = new TaskService();
 
             var taskCards = taskService.GetAllTaskWithComments();
-            result.Value = (IList<TaskCardWithComments>)taskCards;
+            result.Value = taskCards;
             result.IsSuccess = true;
             return result;
         }
@@ -55,13 +55,13 @@ namespace FinancialPlanner.Controllers.TaskManagement
 
         [Route("api/TaskController/GetAllTasks")]
         [HttpGet]
-        public Result<IList<TaskCard>> GetAllTasks()
+        public Result<string> GetAllTasks()
         {
-            var result = new Result<IList<TaskCard>>();
+            var result = new Result<string>();
             TaskService taskService = new TaskService();
 
             var taskCards = taskService.GetAllTasks();
-            result.Value = (IList<TaskCard>)taskCards;
+            result.Value = taskCards;
             result.IsSuccess = true;
             return result;
         }
@@ -94,26 +94,26 @@ namespace FinancialPlanner.Controllers.TaskManagement
 
         [Route("api/TaskController/AssignTo")]
         [HttpGet]
-        public Result<IList<TaskCard>> AssignTo(int userId)
+        public Result<string> AssignTo(int userId)
         {
-            var result = new Result<IList<TaskCard>>();
+            var result = new Result<string>();
             TaskService taskService = new TaskService();
 
             var taskCards = taskService.GetByAssignTo(userId);
-            result.Value = (IList<TaskCard>)taskCards;
+            result.Value = taskCards;
             result.IsSuccess = true;
             return result;
         }
 
         [Route("api/TaskController/GetOverDueTask")]
         [HttpGet]
-        public Result<IList<TaskCard>> GetOverDueTask(int userId)
+        public Result<string> GetOverDueTask(int userId)
         {
-            var result = new Result<IList<TaskCard>>();
+            var result = new Result<string>();
             TaskService taskService = new TaskService();
 
             var taskCards = taskService.GetOverDueTasks(userId);
-            result.Value = (IList<TaskCard>)taskCards;
+            result.Value = taskCards;
             result.IsSuccess = true;
             return result;
         }
@@ -160,13 +160,13 @@ namespace FinancialPlanner.Controllers.TaskManagement
 
         [Route("api/TaskController/GetAll")]
         [HttpGet]
-        public Result<IList<TaskCard>> GetAll()
+        public Result<string> GetAll()
         {
-            var result = new Result<IList<TaskCard>>();
+            var result = new Result<string>();
             TaskService taskService = new TaskService();
 
             var taskCards = taskService.GetAll();
-            result.Value = (IList<TaskCard>)taskCards;
+            result.Value = taskCards;
             result.IsSuccess = true;
             return result;
         }
