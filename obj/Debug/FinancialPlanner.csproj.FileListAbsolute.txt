@@ -56,7 +56,7 @@ C:\Application Softwares\FinancialPlanner\bin\Newtonsoft.Json.xml
 C:\Application Softwares\FinancialPlanner\bin\System.Net.Http.Formatting.xml
 C:\Application Softwares\FinancialPlanner\bin\System.Web.Http.xml
 C:\Application Softwares\FinancialPlanner\bin\System.Web.Http.Cors.xml
-C:\Application Softwares\FinancialPlanner\obj\Debug\FinancialPlanner.csproj.CopyComplete
 C:\Application Softwares\FinancialPlanner\obj\Debug\FinancialPlanner.dll
 C:\Application Softwares\FinancialPlanner\obj\Debug\FinancialPlanner.pdb
 C:\Application Softwares\FinancialPlanner\obj\Debug\FinancialPlanner.csprojAssemblyReference.cache
+C:\Application Softwares\FinancialPlanner\obj\Debug\FinancialPlanner.csproj.CopyComplete

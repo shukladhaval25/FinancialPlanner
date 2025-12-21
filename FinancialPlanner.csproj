@@ -142,6 +142,7 @@
     <Compile Include="Controllers\Masters\ARNController.cs" />
     <Compile Include="Controllers\Masters\ClientRatingController.cs" />
     <Compile Include="Controllers\Masters\InsuranceCompanyController.cs" />
+    <Compile Include="Controllers\Masters\ReportPageSettingMFDController.cs" />
     <Compile Include="Controllers\Masters\ReportPageSettingController.cs" />
     <Compile Include="Controllers\Masters\SchemeCategoryController.cs" />
     <Compile Include="Controllers\Masters\SchemeController.cs" />
@@ -158,6 +159,7 @@
     <Compile Include="Controllers\Planner\IncomeController.cs" />
     <Compile Include="Controllers\Planner\InsuranceRecomendationController.cs" />
     <Compile Include="Controllers\Planner\LoanController.cs" />
+    <Compile Include="Controllers\Planner\MFDInstumentMappedController.cs" />
     <Compile Include="Controllers\Planner\NetWorthController.cs" />
     <Compile Include="Controllers\Planner\SIPInvRecController.cs" />
     <Compile Include="Controllers\Planner\LumsumInvRecController.cs" />
